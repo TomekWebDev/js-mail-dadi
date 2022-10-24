@@ -23,6 +23,11 @@ function checkTheEmail(){
 
 console.log("DICE GAME")
 
+let machineWinNumber = 0;
+let humanWinNumber = 0;
+let draw = 0;
+let rounds = 0;
+
 function startDiceGame(){
 
     // Human part
@@ -32,6 +37,7 @@ function startDiceGame(){
     console.log("Human Dice 2", humanDice2);
     let humanTotalScore = (humanDice1 + humanDice2);
     console.log("Human Score", humanTotalScore);
+
 
     // Machine part
     let machineDice1 = Math.round((Math.random() * 6) + 1)
@@ -43,15 +49,34 @@ function startDiceGame(){
 
     // Processing the winner
     if(humanTotalScore == machineTotalScore){
+        draw = draw + 1;
         console.log("Draw!");
     }
     else if(humanTotalScore > machineTotalScore){
+        humanWinNumber = humanWinNumber + 1;
         console.log("You Won!");
     }
     else {
         console.log("The Machine has more luck than you");
+        machineWinNumber = machineWinNumber + 1;
     }
 
-}
+    // Counting the rounds
+    rounds = rounds + 1;
+
+    console.log(machineWinNumber);
+    console.log(humanWinNumber);
+
+    // Display the total winner
+
+    if (humanWinNumber > machineWinNumber){
+        console.log("Human Wins the total game!");
+    }
+    else{
+        console.log("Machine Wins the total game!");
+    }
+
+};
+
 
 
