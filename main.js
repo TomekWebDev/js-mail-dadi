@@ -42,7 +42,15 @@ function startDiceGame(){
     console.log("Machine Score", machineTotalScore);
 
     // Processing the winner
-
+    if(humanTotalScore == machineTotalScore){
+        console.log("Draw!");
+    }
+    else if(humanTotalScore > machineTotalScore){
+        console.log("You Won!");
+    }
+    else {
+        console.log("The Machine has more luck than you");
+    }
 
 }
 
