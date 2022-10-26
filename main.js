@@ -49,6 +49,8 @@ function checkTheEmail(){
 
     if (variabileControlloPresenza == true){
         console.log("email presente");
+        variabileControlloPresenza = false;
+
     }
     else{
         console.log("iscriviti");
