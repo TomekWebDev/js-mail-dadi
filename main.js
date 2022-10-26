@@ -32,6 +32,8 @@ let backendEmailList = ["111@gmail.com", "112@gmail.com", "113@gmail.com", "114@
 
 let inputEmailToCheck = document.getElementById("inputEmail");
 
+let returnSpace = document.getElementById("checkResultMessage");
+
 let variabileControlloPresenza = false;
 
 function checkTheEmail(){
@@ -49,11 +51,13 @@ function checkTheEmail(){
 
     if (variabileControlloPresenza == true){
         console.log("email presente");
+        returnSpace.innerText = "email presente";
         variabileControlloPresenza = false;
 
     }
     else{
         console.log("iscriviti");
+        returnSpace.innerText = "iscriviti";
     }
 };
 
